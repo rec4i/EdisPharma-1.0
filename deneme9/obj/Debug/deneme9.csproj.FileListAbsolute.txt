@@ -1,0 +1,282 @@
+C:\Users\baba_\source\repos\deneme9\deneme9\obj\Debug\deneme9.csprojAssemblyReference.cache
+C:\Users\baba_\source\repos\deneme9\deneme9\obj\Debug\deneme9.csproj.CoreCompileInputs.cache
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\deneme9.dll.config
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\deneme9.dll
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\deneme9.pdb
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\csc.exe
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\csc.exe.config
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\csc.rsp
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\csi.exe
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\csi.exe.config
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\csi.rsp
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\System.AppContext.dll
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\System.Console.dll
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\System.IO.Compression.dll
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\System.Net.Http.dll
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\System.Net.Sockets.dll
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\System.ValueTuple.dll
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\System.Xml.XPath.dll
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\vbc.exe
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\vbc.exe.config
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\vbc.rsp
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\VBCSCompiler.exe
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\CKEditor.NET.dll
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\baba_\source\repos\deneme9\deneme9\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\baba_\source\repos\deneme9\deneme9\obj\Debug\deneme9.csproj.CopyComplete
+C:\Users\baba_\source\repos\deneme9\deneme9\obj\Debug\deneme9.dll
+C:\Users\baba_\source\repos\deneme9\deneme9\obj\Debug\deneme9.pdb
+G:\Projeler\repos\deneme9\deneme9\bin\deneme9.dll.config
+G:\Projeler\repos\deneme9\deneme9\bin\deneme9.dll
+G:\Projeler\repos\deneme9\deneme9\bin\deneme9.pdb
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\csc.exe
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\csc.exe.config
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\csc.rsp
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\csi.exe
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\csi.exe.config
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\csi.rsp
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\Microsoft.CodeAnalysis.dll
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\Microsoft.CSharp.Core.targets
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\Microsoft.Managed.Core.targets
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\Microsoft.VisualBasic.Core.targets
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\Microsoft.Win32.Primitives.dll
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\System.AppContext.dll
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\System.Collections.Immutable.dll
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\System.Console.dll
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\System.Diagnostics.StackTrace.dll
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\System.Globalization.Calendars.dll
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\System.IO.Compression.dll
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\System.IO.Compression.ZipFile.dll
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\System.IO.FileSystem.dll
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\System.IO.FileSystem.Primitives.dll
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\System.Net.Http.dll
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\System.Net.Sockets.dll
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\System.Reflection.Metadata.dll
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\System.Security.Cryptography.Encoding.dll
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\System.Security.Cryptography.Primitives.dll
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\System.Text.Encoding.CodePages.dll
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\System.Threading.Tasks.Extensions.dll
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\System.ValueTuple.dll
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\System.Xml.ReaderWriter.dll
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\System.Xml.XmlDocument.dll
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\System.Xml.XPath.dll
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\System.Xml.XPath.XDocument.dll
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\vbc.exe
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\vbc.exe.config
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\vbc.rsp
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\VBCSCompiler.exe
+G:\Projeler\repos\deneme9\deneme9\bin\roslyn\VBCSCompiler.exe.config
+G:\Projeler\repos\deneme9\deneme9\bin\CKEditor.NET.dll
+G:\Projeler\repos\deneme9\deneme9\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+G:\Projeler\repos\deneme9\deneme9\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+G:\Projeler\repos\deneme9\deneme9\obj\Debug\deneme9.csprojAssemblyReference.cache
+G:\Projeler\repos\deneme9\deneme9\obj\Debug\deneme9.csproj.CoreCompileInputs.cache
+G:\Projeler\repos\deneme9\deneme9\obj\Debug\deneme9.csproj.CopyComplete
+G:\Projeler\repos\deneme9\deneme9\obj\Debug\deneme9.dll
+G:\Projeler\repos\deneme9\deneme9\obj\Debug\deneme9.pdb
+G:\Projeler\repos\deneme9\deneme9\bin\EntityFramework.dll
+G:\Projeler\repos\deneme9\deneme9\bin\EntityFramework.SqlServer.dll
+G:\Projeler\repos\deneme9\deneme9\bin\Newtonsoft.Json.dll
+G:\Projeler\repos\deneme9\deneme9\bin\EntityFramework.xml
+G:\Projeler\repos\deneme9\deneme9\bin\EntityFramework.SqlServer.xml
+G:\Projeler\repos\deneme9\deneme9\bin\Newtonsoft.Json.xml
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\deneme9.dll.config
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\deneme9.dll
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\deneme9.pdb
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\csc.exe
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\csc.exe.config
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\csc.rsp
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\csi.exe
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\csi.exe.config
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\csi.rsp
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\System.AppContext.dll
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\System.Console.dll
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\System.IO.Compression.dll
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\System.Net.Http.dll
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\System.Net.Sockets.dll
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\System.ValueTuple.dll
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\System.Xml.XPath.dll
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\vbc.exe
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\vbc.exe.config
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\vbc.rsp
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\VBCSCompiler.exe
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\CKEditor.NET.dll
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\EntityFramework.dll
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\EntityFramework.SqlServer.dll
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\Newtonsoft.Json.dll
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\EntityFramework.xml
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\EntityFramework.SqlServer.xml
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\Newtonsoft.Json.xml
+C:\Users\RECAI\source\repos\deneme9\deneme9\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\RECAI\source\repos\deneme9\deneme9\obj\Debug\deneme9.csprojAssemblyReference.cache
+C:\Users\RECAI\source\repos\deneme9\deneme9\obj\Debug\deneme9.csproj.CoreCompileInputs.cache
+C:\Users\RECAI\source\repos\deneme9\deneme9\obj\Debug\deneme9.csproj.CopyComplete
+C:\Users\RECAI\source\repos\deneme9\deneme9\obj\Debug\deneme9.dll
+C:\Users\RECAI\source\repos\deneme9\deneme9\obj\Debug\deneme9.pdb
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\deneme9.dll.config
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\deneme9.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\deneme9.pdb
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\csc.exe
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\csc.exe.config
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\csc.rsp
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\csi.exe
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\csi.exe.config
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\csi.rsp
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\System.AppContext.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\System.Console.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\System.IO.Compression.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\System.Net.Http.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\System.Net.Sockets.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\System.ValueTuple.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\System.Xml.XPath.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\vbc.exe
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\vbc.exe.config
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\vbc.rsp
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\VBCSCompiler.exe
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\CKEditor.NET.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\EntityFramework.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\EntityFramework.SqlServer.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\Microsoft.AspNetCore.Authorization.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\Microsoft.AspNetCore.Metadata.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\Microsoft.Extensions.Options.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\Microsoft.Extensions.Primitives.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\Microsoft.IdentityModel.Logging.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\Microsoft.IdentityModel.Tokens.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\Newtonsoft.Json.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\System.Buffers.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\System.Memory.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\System.Numerics.Vectors.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\EntityFramework.xml
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\EntityFramework.SqlServer.xml
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\Microsoft.AspNetCore.Authorization.xml
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\Microsoft.AspNetCore.Metadata.xml
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\Microsoft.Extensions.Options.xml
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\Microsoft.Extensions.Primitives.xml
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\Microsoft.IdentityModel.Logging.xml
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\Microsoft.IdentityModel.Tokens.xml
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\Newtonsoft.Json.xml
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\System.Buffers.xml
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\System.Memory.xml
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\System.Numerics.Vectors.xml
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\obj\Debug\deneme9.csproj.AssemblyReference.cache
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\obj\Debug\deneme9.csproj.CoreCompileInputs.cache
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\obj\Debug\deneme9.csproj.CopyComplete
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\obj\Debug\deneme9.dll
+C:\Users\RECAİ\Desktop\Recai Proje Kaynak\Edispharma\Deneme9991\Deneme999 - Kopya\deneme9\obj\Debug\deneme9.pdb
