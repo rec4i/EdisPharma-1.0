@@ -23,7 +23,7 @@ namespace deneme9
             }
             else
             {
-                 
+
                 SqlC.con.Close();
             }
         }
@@ -67,10 +67,10 @@ namespace deneme9
             var Tablo_Doldur_Class_ = new Gün_Tablo
             {
                 Gün = endDate.ToString("dd MMMM dddd yyyy"),
-                Pazarmı= endDate.ToString("dddd"),
-                Kırmızımı= Kırmızımı,
-                Gun_Ay_Yıl= endDate.ToString("MM-yyyy"),
-                Gun_Ay_Yıl_Gün= endDate.ToString("yyyy-MM-dd")
+                Pazarmı = endDate.ToString("dddd"),
+                Kırmızımı = Kırmızımı,
+                Gun_Ay_Yıl = endDate.ToString("MM-yyyy"),
+                Gun_Ay_Yıl_Gün = endDate.ToString("yyyy-MM-dd")
             };
             tablo_Doldur_Classes.Add(Tablo_Doldur_Class_);
 
@@ -82,9 +82,9 @@ namespace deneme9
         }
         public class Depo_Şehirleri_Tablo
         {
-            public string Şehir_Ad   { get; set; }
+            public string Şehir_Ad { get; set; }
             public string Şehir_Id { get; set; }
-          
+
         }
         [System.Web.Services.WebMethod]
         public static string Depo_Şehirleri()
@@ -125,7 +125,7 @@ namespace deneme9
         }
         public class Depo_Adları_Tablo
         {
-            public string Depo_Adı   { get; set; }
+            public string Depo_Adı { get; set; }
             public string Depo_Id { get; set; }
 
         }
@@ -225,30 +225,30 @@ namespace deneme9
             public string Satış_Fiyatı_Toplam { get; set; }
             public string Birim_Fiyatı_Toplam { get; set; }
 
-          
+
         }
         [System.Web.Services.WebMethod]
         public static string Birim_Fiyat_Hesapla(string Guncel_DSF, string Adet, string Mf_Adet)
         {
 
-            
-
-
-                double Birim_Fiyat_ = Convert.ToDouble((Convert.ToDouble(Guncel_DSF) * Convert.ToDouble(Adet))/(Convert.ToDouble(Adet) + Convert.ToDouble(Mf_Adet)));
 
 
 
-                var Tablo_Doldur_Class_ = new Birim_Fiyat_Tablo
-                {
-                    Birim_Fiyat = Birim_Fiyat_.ToString("#.##"),
-                    Birim_Fiyatı_Toplam = (Birim_Fiyat_ *(Convert.ToDouble(Adet)+Convert.ToDouble(Mf_Adet))).ToString("#.##"),
-                    Satış_Fiyatı_Toplam = (Convert.ToDouble(Guncel_DSF) * (Convert.ToDouble(Adet) + Convert.ToDouble(Mf_Adet))).ToString("#.##"),
+            double Birim_Fiyat_ = Convert.ToDouble((Convert.ToDouble(Guncel_DSF) * Convert.ToDouble(Adet)) / (Convert.ToDouble(Adet) + Convert.ToDouble(Mf_Adet)));
 
-                };
 
-            
 
-                return JsonConvert.SerializeObject(Tablo_Doldur_Class_);
+            var Tablo_Doldur_Class_ = new Birim_Fiyat_Tablo
+            {
+                Birim_Fiyat = Birim_Fiyat_.ToString("#.##"),
+                Birim_Fiyatı_Toplam = (Birim_Fiyat_ * (Convert.ToDouble(Adet) + Convert.ToDouble(Mf_Adet))).ToString("#.##"),
+                Satış_Fiyatı_Toplam = (Convert.ToDouble(Guncel_DSF) * (Convert.ToDouble(Adet) + Convert.ToDouble(Mf_Adet))).ToString("#.##"),
+
+            };
+
+
+
+            return JsonConvert.SerializeObject(Tablo_Doldur_Class_);
 
 
 
@@ -287,20 +287,138 @@ namespace deneme9
 
         }//Numune_Talebi_Kaldır
 
+        public class Sipariş_Kontrol_Class
+        {
+            public string Adet { get; set; }
+            public string Urun_Adı { get; set; }
+            public string Urun_Id { get; set; }
+
+
+        }
         [System.Web.Services.WebMethod]
-        public static string Siparişi_Kaydet(string Siparis_Array, string Eczane_Id,string Sipariş_Tar,string Depo_Id,string Lansman_Siparişimi)
+        public static string Siparişi_Kontrol_Et(string Siparis_Array, string Eczane_Id)
+        {
+
+            DataSet dataSet = JsonConvert.DeserializeObject<DataSet>(Siparis_Array);
+
+            DataTable dataTable = dataSet.Tables["Deneme"];
+
+
+
+            var queryWithForJson = "" +
+            "declare @Rt Table (" +
+            "Adet nvarchar(max)," +
+            "Urun_Adı nvarchar(max)," +
+            "Urun_Id nvarchar(max)" +
+            ")" +
+            "" +
+            "" +
+            "insert into @Rt " +
+            "" +
+            "" +
+            "" +
+            "   select SUM(Adet)+(select  SUM(CAST(Adet as int)) from @Sipariş where ilaç_id =Urunler.Urun_Id  group by ilaç_id),Urun_Adı,Urunler.Urun_Id from Sipariş_Genel   " +
+            "             " +
+            "            inner join Siparis_Detay   " +
+            "            on Sipariş_Genel.Siparis_Genel_Id=Siparis_Detay.Siparis_Genel_Id   " +
+            "             " +
+            "            inner join Urunler  " +
+            "            on Siparis_Detay.Urun_Id=Urunler.Urun_Id   " +
+            "             " +
+            "             " +
+            "            where Eczane_Id = @Eczane_Id    " +
+            "              " +
+            "            and   " +
+            "             " +
+            "            (  " +
+            "            select sum(Adet)+(select  SUM(CAST(Adet as int)) from @Sipariş where ilaç_id =Urunler.Urun_Id group by ilaç_id) from Sipariş_Genel   " +
+            "            inner join Siparis_Detay   " +
+            "            on Sipariş_Genel.Siparis_Genel_Id=Siparis_Detay.Siparis_Genel_Id   " +
+            "            where Eczane_Id = @Eczane_Id   " +
+            "             " +
+            "            )>=Urunler.Maks_Eczane_Bası_Siparis   " +
+            "             " +
+            "              " +
+            "            group by Urunler.Urun_Id , Urun_Adı,Urunler.Urun_Id   " +
+            "" +
+            "" +
+            "			" +
+            "" +
+            "" +
+            "" +
+            "" +
+            "insert into @Rt select Adet,Urun_Adı,Urun_Id from Urunler " +
+            "" +
+            "inner join @Sipariş " +
+            "on Urun_Id=ilaç_id " +
+            "" +
+            "where Adet>Maks_Eczane_Bası_Siparis and Urun_Id not in (select Urun_Id from @Rt) " +
+            "" +
+            "" +
+            "select * from @Rt " +
+            "" +
+            "";
+
+
+            var conn = new SqlConnection(@"server=.;Database=KASA;User ID=sa;Password=likompresto%1");
+            var cmd = new SqlCommand(queryWithForJson, conn);
+            cmd.Parameters.AddWithValue("@Kullanıcı_Ad", FormsAuthentication.Decrypt(System.Web.HttpContext.Current.Request.Cookies[".ASPXAUTH"].Value).Name.ToString());
+            cmd.Parameters.AddWithValue("@Eczane_ıd", Eczane_Id);
+
+
+
+
+            SqlParameter tvpParam = cmd.Parameters.AddWithValue("@Sipariş", dataTable);
+            tvpParam.SqlDbType = SqlDbType.Structured;
+            tvpParam.TypeName = "dbo.Sipariş_";
+
+            conn.Open();
+
+            List<Sipariş_Kontrol_Class> tablo_Doldur_Classes = new List<Sipariş_Kontrol_Class>();
+
+
+            var jsonResult = new StringBuilder();
+            var reader = cmd.ExecuteReader();
+            if (!reader.HasRows)
+            {
+                jsonResult.Append("[]");
+            }
+            else
+            {
+                while (reader.Read())
+                {
+                    var Tablo_Doldur_Class_ = new Sipariş_Kontrol_Class
+                    {
+                        Adet = reader.GetValue(0).ToString(),
+                        Urun_Adı = reader.GetValue(1).ToString(),
+                        Urun_Id = reader.GetValue(2).ToString(),
+
+                    };
+                    tablo_Doldur_Classes.Add(Tablo_Doldur_Class_);
+                }
+            }
+            conn.Close();
+            return JsonConvert.SerializeObject(tablo_Doldur_Classes);
+
+
+
+        }
+
+
+        [System.Web.Services.WebMethod]
+        public static string Siparişi_Kaydet(string Siparis_Array, string Eczane_Id, string Sipariş_Tar, string Depo_Id, string Lansman_Siparişimi)
         {
             var result = JsonConvert.DeserializeObject<Gün_Tablo>(Gün_Say(Sipariş_Tar));
             Takvim.Haftanın_Gunleri(result.Gun_Ay_Yıl);
             DateTime Gün = Convert.ToDateTime(result.Gun_Ay_Yıl_Gün);
-            if (Gün.ToString("dddd")=="Pazar")
+            if (Gün.ToString("dddd") == "Pazar")
             {
-               
+
                 return "0";
             }
             if (Gün.ToString("dddd") == "Cumartesi")
             {
-                
+
                 return "0";
             }
             else
@@ -349,15 +467,6 @@ namespace deneme9
             }
 
 
-
-
-
-
-           
-        
-            
-            
-            
         }
 
 
