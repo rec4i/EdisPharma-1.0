@@ -303,60 +303,71 @@ namespace deneme9
 
             DataTable dataTable = dataSet.Tables["Deneme"];
 
+            DateTime dateTime = DateTime.Now;
+
+            DateTime Bas_Tar = dateTime.AddDays(-dateTime.Day + 1);
+
+            DateTime Bit_Tar = dateTime.AddMonths(1).AddDays(-dateTime.Day);
+
 
 
             var queryWithForJson = "" +
-            "declare @Rt Table (" +
-            "Adet nvarchar(max)," +
-            "Urun_Adı nvarchar(max)," +
-            "Urun_Id nvarchar(max)" +
-            ")" +
-            "" +
-            "" +
-            "insert into @Rt " +
-            "" +
-            "" +
-            "" +
-            "   select SUM(Adet)+(select  SUM(CAST(Adet as int)) from @Sipariş where ilaç_id =Urunler.Urun_Id  group by ilaç_id),Urun_Adı,Urunler.Urun_Id from Sipariş_Genel   " +
-            "             " +
-            "            inner join Siparis_Detay   " +
-            "            on Sipariş_Genel.Siparis_Genel_Id=Siparis_Detay.Siparis_Genel_Id   " +
-            "             " +
-            "            inner join Urunler  " +
-            "            on Siparis_Detay.Urun_Id=Urunler.Urun_Id   " +
-            "             " +
-            "             " +
-            "            where Eczane_Id = @Eczane_Id    " +
-            "              " +
-            "            and   " +
-            "             " +
-            "            (  " +
-            "            select sum(Adet)+(select  SUM(CAST(Adet as int)) from @Sipariş where ilaç_id =Urunler.Urun_Id group by ilaç_id) from Sipariş_Genel   " +
-            "            inner join Siparis_Detay   " +
-            "            on Sipariş_Genel.Siparis_Genel_Id=Siparis_Detay.Siparis_Genel_Id   " +
-            "            where Eczane_Id = @Eczane_Id   " +
-            "             " +
-            "            )>=Urunler.Maks_Eczane_Bası_Siparis   " +
-            "             " +
-            "              " +
-            "            group by Urunler.Urun_Id , Urun_Adı,Urunler.Urun_Id   " +
-            "" +
-            "" +
-            "			" +
-            "" +
-            "" +
-            "" +
-            "" +
-            "insert into @Rt select Adet,Urun_Adı,Urun_Id from Urunler " +
-            "" +
-            "inner join @Sipariş " +
-            "on Urun_Id=ilaç_id " +
-            "" +
-            "where Adet>Maks_Eczane_Bası_Siparis and Urun_Id not in (select Urun_Id from @Rt) " +
-            "" +
-            "" +
-            "select * from @Rt " +
-            "" +
+                "	  declare @Rt Table (   " +
+                "             Adet nvarchar(max),   " +
+                "             Urun_Adı nvarchar(max),   " +
+                "             Urun_Id nvarchar(max)   " +
+                "             )   " +
+                "                " +
+                "                " +
+                "             insert into @Rt     " +
+                "                " +
+                "                " +
+                "                " +
+                "select SUM(Adet)+(select sum(CAST(Adet as int)) from @Sipariş where ilaç_id=Urunler.Urun_Id group by ilaç_id),Urun_Adı,Urunler.Urun_Id  from Siparis_Detay  " +
+                "" +
+                "inner join Sipariş_Genel  " +
+                "" +
+                "on Sipariş_Genel.Siparis_Genel_Id=Siparis_Detay.Siparis_Detay_Id " +
+                "" +
+                "inner join Urunler  " +
+                "on Urunler.Urun_Id=Siparis_Detay.Urun_Id " +
+                "" +
+                "where Eczane_Id=@Eczane_Id  " +
+                "" +
+                "" +
+                "and CAST(Tar as date) between @Bas_Tar and @Bit_Tar " +
+                "" +
+                "and " +
+                "" +
+                "( " +
+                "select SUM(Adet)+((select sum(CAST(Adet as int)) from @Sipariş where ilaç_id=Urun_Id group by ilaç_id))  from Siparis_Detay   " +
+                "" +
+                "inner join Sipariş_Genel  " +
+                "on Sipariş_Genel.Siparis_Genel_Id=Siparis_Detay.Siparis_Detay_Id  " +
+                "" +
+                "" +
+                "where Eczane_Id=@Eczane_Id  and Siparis_Detay.Urun_Id=Urunler.Urun_Id and CAST(Tar as date) between @Bas_Tar and @Bit_Tar  " +
+                "group by Urun_Id  " +
+                "" +
+                ")>Urunler.Maks_Eczane_Bası_Siparis " +
+                "" +
+                "" +
+                "group by Urunler.Urun_Id,Urun_Adı  " +
+                "                " +
+                "             			   " +
+                "                " +
+                "                " +
+                "                " +
+                "                " +
+                "             insert into @Rt select Adet,Urun_Adı,Urun_Id from Urunler     " +
+                "                " +
+                "             inner join @Sipariş     " +
+                "             on Urun_Id=ilaç_id     " +
+                "                " +
+                "             where Adet>Maks_Eczane_Bası_Siparis and Urun_Id not in (select Urun_Id from @Rt)     " +
+                "                " +
+                "                 " +
+                "             select * from @Rt    " +
             "";
 
 
@@ -364,6 +375,11 @@ namespace deneme9
             var cmd = new SqlCommand(queryWithForJson, conn);
             cmd.Parameters.AddWithValue("@Kullanıcı_Ad", FormsAuthentication.Decrypt(System.Web.HttpContext.Current.Request.Cookies[".ASPXAUTH"].Value).Name.ToString());
             cmd.Parameters.AddWithValue("@Eczane_ıd", Eczane_Id);
+            cmd.Parameters.AddWithValue("@Bas_Tar", Bas_Tar);
+
+            cmd.Parameters.AddWithValue("@Bit_Tar", Bit_Tar);
+
+
 
 
 

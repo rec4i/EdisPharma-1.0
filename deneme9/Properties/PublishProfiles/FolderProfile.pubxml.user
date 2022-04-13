@@ -4,7 +4,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <_PublishTargetUrl>E:\Edispharma\Edispharma\realese</_PublishTargetUrl>
+    <_PublishTargetUrl>C:\Users\RECAİ\Desktop\EdispHarmaÇıktı</_PublishTargetUrl>
     <History>True|2022-02-11T09:38:20.9611142Z;True|2022-01-19T20:48:16.8034267+03:00;True|2021-07-29T20:35:31.9358119+03:00;True|2021-07-23T17:14:54.6595245+03:00;False|2021-07-10T15:43:50.7851409+03:00;False|2021-07-10T15:43:24.1080311+03:00;False|2021-07-03T11:26:34.5738506+03:00;False|2021-07-03T11:21:19.2839772+03:00;True|2021-06-28T13:43:15.0381147+03:00;True|2021-05-28T11:29:47.1291946+03:00;True|2021-04-07T17:50:09.3967558+03:00;True|2021-04-06T11:03:25.8407497+03:00;True|2021-03-11T17:34:14.4445079+03:00;</History>
   </PropertyGroup>
   <ItemGroup>
@@ -51,19 +51,19 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/08/2021 22:57:40</publishTime>
     </File>
     <File Include="bin/App_global.asax.compiled">
-      <publishTime>03/15/2022 16:44:37</publishTime>
+      <publishTime>04/13/2022 13:04:23</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>03/15/2022 16:44:37</publishTime>
+      <publishTime>04/13/2022 13:04:23</publishTime>
     </File>
     <File Include="bin/CKEditor.NET.dll">
       <publishTime>11/05/2012 09:16:44</publishTime>
     </File>
     <File Include="bin/deneme9.dll">
-      <publishTime>03/15/2022 16:43:04</publishTime>
+      <publishTime>04/13/2022 13:04:03</publishTime>
     </File>
     <File Include="bin/deneme9.pdb">
-      <publishTime>03/15/2022 16:43:04</publishTime>
+      <publishTime>04/13/2022 13:04:03</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>04/16/2020 20:38:42</publishTime>
@@ -22548,7 +22548,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/15/2020 14:23:19</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>03/15/2022 16:44:30</publishTime>
+      <publishTime>04/13/2022 13:04:14</publishTime>
     </File>
     <File Include="Profil.aspx">
       <publishTime>03/09/2021 15:49:43</publishTime>
@@ -23640,7 +23640,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>07/09/2021 17:13:29</publishTime>
     </File>
     <File Include="Siparis-Olustur.aspx">
-      <publishTime>03/15/2022 10:44:12</publishTime>
+      <publishTime>04/13/2022 10:40:03</publishTime>
     </File>
     <File Include="siparisonaylılar.aspx">
       <publishTime>10/24/2020 00:18:14</publishTime>
@@ -23718,7 +23718,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>03/17/2021 11:38:18</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>03/15/2022 12:39:13</publishTime>
+      <publishTime>04/13/2022 12:26:53</publishTime>
     </File>
     <File Include="WebForm1.aspx">
       <publishTime>08/25/2021 14:26:13</publishTime>

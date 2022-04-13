@@ -549,6 +549,49 @@
             });
             Siparişi_Oluştur_Modal.click(function () {
                 var Gönderilsinmi = 1;
+
+               
+
+                $.ajax({
+                    url: 'Siparis-Olustur.aspx/Siparişi_Kontrol_Et', //doktorları listelerken tersten listele
+                    dataType: 'json',
+                    type: 'POST',
+                    async: false,
+
+                    data: "{'Siparis_Array': '{Deneme:" + JSON.stringify(Liste) + "}','Eczane_Id':'" + $(this).attr('Eczane_Id') + "'}",
+                    contentType: 'application/json; charset=utf-8',
+                    success: function (data) {
+
+                        var temp = JSON.parse(data.d);
+                        console.log(temp)
+                        if (temp.length <= 0) {
+                            Gönderilsinmi = 1
+
+                            
+                        }
+                        else {
+                            var UrunlerText = "";
+
+                            for (var i = 0; i < temp.length; i++) {
+                                UrunlerText += "</br>" + temp[i].Urun_Adı + '  ' + temp[i].Adet+' Adet !'
+                            }
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Seçili Urunlerden Maksimum Sipariş Adetine Ulaşıldı',
+                                html: UrunlerText,
+                            })
+                            Gönderilsinmi = 0
+                        }
+                       
+
+                    },
+                    error: function () {
+
+                        alert('Talep esnasında sorun oluştu.Yeniden deneyin');
+
+                    }
+                });
+
                 if ($('input[id=Gün_Output]').attr('Gun_Ay_Yıl') == "") {
                     Gönderilsinmi = 0;
                     alert("Lütfen Tüm alanların doğru dolduğunuzdan emin olun!")
@@ -569,10 +612,10 @@
                     Gönderilsinmi = 0;
                     alert("Lütfen Tüm alanların doğru dolduğunuzdan emin olun!")
                 }
-                if ($('select[id=Lansam_Siparişimi]').find('option:selected').attr('value') == "0") {
-                    Gönderilsinmi = 0;
-                    alert("Lütfen Tüm alanların doğru dolduğunuzdan emin olun!")
-                }
+                //if ($('select[id=Lansam_Siparişimi]').find('option:selected').attr('value') == "0") {
+                //    Gönderilsinmi = 0;
+                //    alert("Lütfen Tüm alanların doğru dolduğunuzdan emin olun!")
+                //}
 
                 if (Gönderilsinmi == 1) {
                     $.ajax({
@@ -581,7 +624,7 @@
                         type: 'POST',
                         async: false,
 
-                        data: "{'Siparis_Array': '{Deneme:" + JSON.stringify(Liste) + "}','Eczane_Id':'" + $(this).attr('Eczane_Id') + "','Sipariş_Tar':'" + $('input[id=Gün_İnput]').val() + "',Depo_Id:'" + $('select[id=Depo_Ad]').find('option:selected').attr('value') + "','Lansman_Siparişimi':'" + $('select[id=Lansam_Siparişimi]').find('option:selected').attr('value') + "'}",
+                        data: "{'Siparis_Array': '{Deneme:" + JSON.stringify(Liste) + "}','Eczane_Id':'" + $(this).attr('Eczane_Id') + "','Sipariş_Tar':'" + $('input[id=Gün_İnput]').val() + "',Depo_Id:'" + $('select[id=Depo_Ad]').find('option:selected').attr('value') + "','Lansman_Siparişimi':'" + 0 /*$('select[id=Lansam_Siparişimi]').find('option:selected').attr('value') */+ "'}",
                         contentType: 'application/json; charset=utf-8',
                         success: function (data) {
                             if (data.d == "0") {
@@ -769,7 +812,7 @@
                                         <label>Lütfen Depo Belirleyiniz</label>
                                     </div>
                                     <div class="panel-body">
-                                        <div class="row">
+                                        <%--<div class="row">
                                             <div class="col-xs-12">
                                                 <label>Lansman Siparişi :</label>
                                                 <div class="form-form-group">
@@ -780,7 +823,7 @@
                                                     </select>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div>--%>
                                         <div class="row">
                                             <div class="col-xs-12">
                                                 <label>Lütfen İl Seçiniz</label>
