@@ -65,6 +65,99 @@ namespace deneme9
 
         }
         [System.Web.Services.WebMethod]
+        public static string Kullanıcı_Listesi_Searcy(string Harf)
+        {
+            var queryWithForJson = "use kasa  " +
+                "select AD,Soyad,KullanıcıID from Kullanıcı where Kullanıcı.Kullanıcı_Grup=4 and   Kullanıcı.Kullanıcı_Bogle!=0 and AD+' '+Soyad like '%'+@Harf+'%'  ";
+
+            var conn = new SqlConnection(@"server=.;Database=KASA;User ID=sa;Password=likompresto%1");
+            var cmd = new SqlCommand(queryWithForJson, conn);
+            conn.Open();
+            cmd.Parameters.AddWithValue("@Kullanıcı_Ad", FormsAuthentication.Decrypt(System.Web.HttpContext.Current.Request.Cookies[".ASPXAUTH"].Value).Name.ToString());
+            cmd.Parameters.AddWithValue("@Harf", Harf);
+
+
+
+            List<Kullanıcı_Liste> tablo_Doldur_Classes = new List<Kullanıcı_Liste>();
+
+
+            var jsonResult = new StringBuilder();
+            var reader = cmd.ExecuteReader();
+            if (!reader.HasRows)
+            {
+                jsonResult.Append("[]");
+            }
+            else
+            {
+                while (reader.Read())
+                {
+                    var Tablo_Doldur_Class_ = new Kullanıcı_Liste
+                    {
+                        Ad = reader.GetValue(0).ToString(),
+                        Soyad = reader.GetValue(1).ToString(),
+                        Kullanıcı_ID = reader.GetValue(2).ToString(),
+
+
+
+                    };
+                    tablo_Doldur_Classes.Add(Tablo_Doldur_Class_);
+                }
+            }
+            conn.Close();
+            return JsonConvert.SerializeObject(tablo_Doldur_Classes);
+
+
+        }
+        class Bolgeler
+        {
+            public string Bolge_Id { get; set; }
+            public string Bolge_Ad { get; set; }
+
+        }
+
+        [System.Web.Services.WebMethod]
+        public static string Bölge_Listesi_Searcy(string Harf)
+        {
+            var queryWithForJson = "use kasa  " +
+                "select Bolge_Id,Bolge_Ad from Bolgeler where Bolge_Ad like '%'@Harf'%' ";
+
+            var conn = new SqlConnection(@"server=.;Database=KASA;User ID=sa;Password=likompresto%1");
+            var cmd = new SqlCommand(queryWithForJson, conn);
+            conn.Open();
+            cmd.Parameters.AddWithValue("@Kullanıcı_Ad", FormsAuthentication.Decrypt(System.Web.HttpContext.Current.Request.Cookies[".ASPXAUTH"].Value).Name.ToString());
+            cmd.Parameters.AddWithValue("@Harf", Harf);
+
+
+
+            List<Bolgeler> tablo_Doldur_Classes = new List<Bolgeler>();
+
+
+            var jsonResult = new StringBuilder();
+            var reader = cmd.ExecuteReader();
+            if (!reader.HasRows)
+            {
+                jsonResult.Append("[]");
+            }
+            else
+            {
+                while (reader.Read())
+                {
+                    var Tablo_Doldur_Class_ = new Bolgeler
+                    {
+                        Bolge_Id = reader.GetValue(0).ToString(),
+                        Bolge_Ad = reader.GetValue(1).ToString(),
+
+
+                    };
+                    tablo_Doldur_Classes.Add(Tablo_Doldur_Class_);
+                }
+            }
+            conn.Close();
+            return JsonConvert.SerializeObject(tablo_Doldur_Classes);
+
+
+        }
+        [System.Web.Services.WebMethod]
         public static string Kullanıcı_Listesi(string Şehir_Id)
         {
             var queryWithForJson = "use kasa  " +

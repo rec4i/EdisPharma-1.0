@@ -115,7 +115,39 @@
 
 
             })
+            //Bölge_Listesi_Searcy
+            $("select[name=Bölge_Adı_Selec2]").select2({
+                placeholder: "Lütfen Ürün Seçiniz",
+                "language": {
+                    "noResults": function () {
+                        return "Sonuç Bulunamadı";
+                    }
+                },
+                ajax: {
+                    url: "Tsm-Sipariş-Raporu.aspx/Bölge_Listesi_Searcy",
+                    dataType: 'json',
+                    type: 'POST',
+                    delay: 250,
+                    global: false,
+                    contentType: "application/json; charset=utf-8",
+                    data: function (params) {
+                        return '{"Harf":"' + params.term + '"}'
+                    },
+                    processResults: function (data, params) {
+                        return {
+                            results: $.map(JSON.parse(data.d), function (item) {
 
+                                return {
+                                    text: item.Bolge_Ad,
+                                    id: item.Bolge_Id
+                                }
+                            })
+                        };
+                    },
+                    cache: true
+                },
+                minimumInputLength: 2
+            })
 
             $("select[name=Ürün_adı_Selec2]").select2({
                 placeholder: "Lütfen Ürün Seçiniz",
@@ -141,6 +173,38 @@
                                 return {
                                     text: item.LastName,
                                     id: item.Id
+                                }
+                            })
+                        };
+                    },
+                    cache: true
+                },
+                minimumInputLength: 2
+            })
+            $("select[name=Tsm_Ad_Selec2]").select2({
+                placeholder: "Lütfen Ürün Seçiniz",
+                "language": {
+                    "noResults": function () {
+                        return "Sonuç Bulunamadı";
+                    }
+                },
+                ajax: {
+                    url: "Sipariş_Rapor_Kmy.aspx/Kullanıcı_Listesi_Searcy",
+                    dataType: 'json',
+                    type: 'POST',
+                    delay: 250,
+                    global: false,
+                    contentType: "application/json; charset=utf-8",
+                    data: function (params) {
+                        return '{"Harf":"' + params.term + '"}'
+                    },
+                    processResults: function (data, params) {
+
+                        return {
+                            results: $.map(JSON.parse(data.d), function (item) {
+                                return {
+                                    text: item.Ad + ' ' + item.Soyad,
+                                    id: item.Kullanıcı_ID
                                 }
                             })
                         };
@@ -207,15 +271,39 @@
                 return Urun_Adı_Liste;
             }
 
+            function Tsm_Getir__() {
+
+                var Urun_Adı_Select2 = $('select[id=Tsm_Ad_Selec2]')
+                var Urun_Adı_Liste = [];
+                var data = Urun_Adı_Select2.select2('data');
+                if (data.length > 0) {
+                    for (var i = 0; i < data.length; i++) {
+                        var Urun_Adı_Class = {
+                            Şehir_: null
+                        }
+                        Urun_Adı_Class.Şehir_ = data[i].id;
+                        Urun_Adı_Liste.push(Urun_Adı_Class)
+                    }
+                }
+                else {
+                    var Urun_Adı_Class = {
+                        Şehir_: null
+                    }
+                    Urun_Adı_Class.Şehir_ = null;
+                    Urun_Adı_Liste.push(Urun_Adı_Class)
+                }
+                return Urun_Adı_Liste;
+            }
+
 
             var cal_set = $('input[id=cal_set]')
             cal_set.on('click', function () {
 
-               
+
 
                 if (Tsm_Ad.find('option:selected').val() != 0) {
                     window.location.href = "Sipariş_Rapor_KMY.aspx?x=" + TextBox2.val() + "&y=" + TextBox3.val() + "&z=" + Tsm_Ad.find('option:selected').val() +
-                        "&u=" + JSON.stringify(Urun_Adı_getir()) + "&d=" + JSON.stringify(Durum__getir())
+                        "&u=" + JSON.stringify(Urun_Adı_getir()) + "&d=" + JSON.stringify(Durum__getir()) + "&Tsm=" + JSON.stringify(Tsm_Getir__())
                 }
                 else {
                     alert("lütfen tsm seçiniz")
@@ -241,19 +329,19 @@
 
             }
 
-         
+
             var Kullanıcı_Ad = Tsm_Ad.find('option:selected').html()
 
 
             var _Durum_listesi = "";
-           
-            
+
+
             function _ürün_listesi_getir() {
                 var temp = decodeURI(window.location.href).split('&')
                 console.log(temp)
                 if (temp.length > 1) {
                     return JSON.parse(temp[3].split('=')[1]);
-                    
+
                 }
                 else {
                     return '{"Urun_Adı":null}';
@@ -283,8 +371,8 @@
                 async: false,
 
                 data: "{'parametre': '" + TextBox2.val() + "*" + TextBox3.val() + "*" + Kullanıcı_Adı_Düzelt() + "'," +
-                    "'İletim_Durum':'{İletim_Durum__:" + JSON.stringify(_Durum_Getir())+ "}'," +
-                    "'Ürün_Listesi':'{Ürün_Listesi__:" + JSON.stringify(_ürün_listesi_getir())  + "}'" +
+                    "'İletim_Durum':'{İletim_Durum__:" + JSON.stringify(_Durum_Getir()) + "}'," +
+                    "'Ürün_Listesi':'{Ürün_Listesi__:" + JSON.stringify(_ürün_listesi_getir()) + "}'" +
                     //"'Branş':'{Depo_Liste:" + JSON.stringify(Depo_Adı_Liste) + "}'" +
                     "}",
                 //data: "{" +
@@ -426,7 +514,7 @@
                 },
                 error: function () {
 
-                   // alert('Talep esnasında sorun oluştu.Yeniden deneyin');
+                    // alert('Talep esnasında sorun oluştu.Yeniden deneyin');
 
                 }
             });
@@ -457,7 +545,7 @@
                     }
                 },
                 error: function () {
-                   // alert('Talep esnasında sorun oluştu.Yeniden deneyin');
+                    // alert('Talep esnasında sorun oluştu.Yeniden deneyin');
                 }
             });
 
@@ -905,10 +993,22 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="form-group">
-                        <%--// has-error--%>
+
                         <label>TSM Adı</label>
                         <select id="Tsm_Ad" class="form-control">
                         </select>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <label>TSM Adı</label>
+                        <select name="Tsm_Ad_Selec2" class="js-example-placeholder-multiple js-states form-control" id="Tsm_Ad_Selec2" multiple="multiple"></select>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <label>Bölge Adı</label>
+                        <select name="Bölge_Adı_Selec2" class="js-example-placeholder-multiple js-states form-control" id="Bölge_Adı_Selec2" multiple="multiple"></select>
                     </div>
                 </div>
             </div>
