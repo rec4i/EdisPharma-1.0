@@ -734,6 +734,9 @@ namespace deneme9
             string gelen_ay = parametre.Split('*')[1];
             string Kullanıcı = parametre.Split('*')[2];
             var queryWithForJson = "" +
+          
+                "" +
+                "" +
                 "select   Eczane_Adı,Eczacı_Adı,TownName,CityName,sum(Adet*Guncel_ISF)" +
                 "	" +
                 "	from Sipariş_Genel      " +

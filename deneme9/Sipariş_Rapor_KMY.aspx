@@ -124,7 +124,7 @@
                     }
                 },
                 ajax: {
-                    url: "Tsm-Sipariş-Raporu.aspx/Bölge_Listesi_Searcy",
+                    url: "Sipariş_Rapor_Kmy.aspx/Bölge_Listesi_Searcy",
                     dataType: 'json',
                     type: 'POST',
                     delay: 250,
@@ -295,19 +295,36 @@
                 return Urun_Adı_Liste;
             }
 
+            function Bölge_Getir__() {
+
+                var Urun_Adı_Select2 = $('select[id=Bölge_Adı_Selec2]')
+                var Urun_Adı_Liste = [];
+                var data = Urun_Adı_Select2.select2('data');
+                if (data.length > 0) {
+                    for (var i = 0; i < data.length; i++) {
+                        var Urun_Adı_Class = {
+                            Şehir_: null
+                        }
+                        Urun_Adı_Class.Şehir_ = data[i].id;
+                        Urun_Adı_Liste.push(Urun_Adı_Class)
+                    }
+                }
+                else {
+                    var Urun_Adı_Class = {
+                        Şehir_: null
+                    }
+                    Urun_Adı_Class.Şehir_ = null;
+                    Urun_Adı_Liste.push(Urun_Adı_Class)
+                }
+                return Urun_Adı_Liste;
+            }
+
 
             var cal_set = $('input[id=cal_set]')
             cal_set.on('click', function () {
 
-
-
-                if (Tsm_Ad.find('option:selected').val() != 0) {
-                    window.location.href = "Sipariş_Rapor_KMY.aspx?x=" + TextBox2.val() + "&y=" + TextBox3.val() + "&z=" + Tsm_Ad.find('option:selected').val() +
-                        "&u=" + JSON.stringify(Urun_Adı_getir()) + "&d=" + JSON.stringify(Durum__getir()) + "&Tsm=" + JSON.stringify(Tsm_Getir__())
-                }
-                else {
-                    alert("lütfen tsm seçiniz")
-                }
+                window.location.href = "Sipariş_Rapor_KMY.aspx?x=" + TextBox2.val() + "&y=" + TextBox3.val() + "&z=" + Tsm_Ad.find('option:selected').val() +
+                    "&u=" + JSON.stringify(Urun_Adı_getir()) + "&d=" + JSON.stringify(Durum__getir()) + "&Tsm=" + JSON.stringify(Tsm_Getir__()) + "&Bolge=" + JSON.stringify(Bölge_Getir__())
 
 
             });
@@ -318,7 +335,6 @@
 
             function Kullanıcı_Adı_Düzelt() {
                 var temp = decodeURI(window.location.href).split('&')
-                console.log(temp)
                 if (temp.length > 1) {
                     return JSON.parse(temp[2].split('=')[1]);
 
@@ -338,7 +354,6 @@
 
             function _ürün_listesi_getir() {
                 var temp = decodeURI(window.location.href).split('&')
-                console.log(temp)
                 if (temp.length > 1) {
                     return JSON.parse(temp[3].split('=')[1]);
 
@@ -350,7 +365,6 @@
 
             function _Durum_Getir() {
                 var temp = decodeURI(window.location.href).split('&')
-                console.log(temp)
                 if (temp.length > 1) {
                     return JSON.parse(temp[4].split('=')[1]);
 
@@ -360,19 +374,44 @@
                 }
 
             }
+            function _Kullanıcı_Listesi_Getir() {
+                var temp = decodeURI(window.location.href).split('&')
+                if (temp.length > 1) {
+                    return JSON.parse(temp[5].split('=')[1]);
+
+                }
+                else {
+                    return '{"Urun_Adı":null}';
+                }
+
+            }
+            function _Bölge_Listesi_Getir() {
+                var temp = decodeURI(window.location.href).split('&')
+                if (temp.length > 1) {
+                    return JSON.parse(temp[6].split('=')[1]);
+
+                }
+                else {
+                    return '{"Urun_Adı":null}';
+                }
+
+            }
 
 
-            console.log(_Durum_listesi)
             var parsdata;
             $.ajax({
-                url: 'Tsm-Sipariş-Raporu.aspx/Tabloları_Doldur',
+                url: 'Sipariş_Rapor_Kmy.aspx/Tabloları_Doldur',
                 dataType: 'json',
                 type: 'POST',
                 async: false,
 
                 data: "{'parametre': '" + TextBox2.val() + "*" + TextBox3.val() + "*" + Kullanıcı_Adı_Düzelt() + "'," +
                     "'İletim_Durum':'{İletim_Durum__:" + JSON.stringify(_Durum_Getir()) + "}'," +
-                    "'Ürün_Listesi':'{Ürün_Listesi__:" + JSON.stringify(_ürün_listesi_getir()) + "}'" +
+                    "'Ürün_Listesi':'{Ürün_Listesi__:" + JSON.stringify(_ürün_listesi_getir()) + "}'," +
+                    "'Bölge_Listesi':'{Bölge_Listesi__:" + JSON.stringify(_Bölge_Listesi_Getir()) + "}'," +
+                    "'Kullanıcı_Listesi':'{Kullanıcı_Listesi__:" + JSON.stringify(_Kullanıcı_Listesi_Getir()) + "}'" +
+
+
                     //"'Branş':'{Depo_Liste:" + JSON.stringify(Depo_Adı_Liste) + "}'" +
                     "}",
                 //data: "{" +
@@ -383,8 +422,6 @@
                 contentType: 'application/json; charset=utf-8',
                 success: function (data) {
                     var temp = JSON.parse(data.d)
-
-                    console.log(temp)
 
                     if (temp.length > 0) {
                         for (var i = 0; i < temp.length; i++) {
@@ -520,20 +557,27 @@
             });
 
             $.ajax({
-                url: 'Tsm-Sipariş-Raporu.aspx/Günlük_Satış_Verisi',
+                url: 'Sipariş_Rapor_Kmy.aspx/Günlük_Satış_Verisi',
                 dataType: 'json',
                 type: 'POST',
                 async: false,
                 data: "{'parametre': '" + TextBox2.val() + "*" + TextBox3.val() + "*" + Kullanıcı_Adı_Düzelt() + "'," +
                     "'İletim_Durum':'{İletim_Durum__:" + JSON.stringify(_Durum_Getir()) + "}'," +
-                    "'Ürün_Listesi':'{Ürün_Listesi__:" + JSON.stringify(_ürün_listesi_getir()) + "}'" +
+                    "'Ürün_Listesi':'{Ürün_Listesi__:" + JSON.stringify(_ürün_listesi_getir()) + "}'," +
+                    "'Bölge_Listesi':'{Bölge_Listesi__:" + JSON.stringify(_Bölge_Listesi_Getir()) + "}'," +
+                    "'Kullanıcı_Listesi':'{Kullanıcı_Listesi__:" + JSON.stringify(_Kullanıcı_Listesi_Getir()) + "}'" +
+
+
                     //"'Branş':'{Depo_Liste:" + JSON.stringify(Depo_Adı_Liste) + "}'" +
                     "}",
                 contentType: 'application/json; charset=utf-8',
                 success: function (data) {
                     var temp = JSON.parse(data.d)
 
+                    console.log("Günlük Satış veirisi")
+
                     console.log(temp)
+
 
                     if (temp.length > 0) {
                         for (var i = 0; i < temp.length; i++) {
@@ -550,20 +594,23 @@
             });
 
             $.ajax({
-                url: 'Tsm-Sipariş-Raporu.aspx/Günlük_Satış_Verisi_Toplam',
+                url: 'Sipariş_Rapor_Kmy.aspx/Günlük_Satış_Verisi_Toplam',
                 dataType: 'json',
                 type: 'POST',
                 async: false,
                 data: "{'parametre': '" + TextBox2.val() + "*" + TextBox3.val() + "*" + Kullanıcı_Adı_Düzelt() + "'," +
                     "'İletim_Durum':'{İletim_Durum__:" + JSON.stringify(_Durum_Getir()) + "}'," +
-                    "'Ürün_Listesi':'{Ürün_Listesi__:" + JSON.stringify(_ürün_listesi_getir()) + "}'" +
+                    "'Ürün_Listesi':'{Ürün_Listesi__:" + JSON.stringify(_ürün_listesi_getir()) + "}'," +
+                    "'Bölge_Listesi':'{Bölge_Listesi__:" + JSON.stringify(_Bölge_Listesi_Getir()) + "}'," +
+                    "'Kullanıcı_Listesi':'{Kullanıcı_Listesi__:" + JSON.stringify(_Kullanıcı_Listesi_Getir()) + "}'" +
+
+
                     //"'Branş':'{Depo_Liste:" + JSON.stringify(Depo_Adı_Liste) + "}'" +
                     "}",
                 contentType: 'application/json; charset=utf-8',
                 success: function (data) {
                     var temp = JSON.parse(data.d)
 
-                    console.log(temp)
 
                     if (temp.length > 0) {
                         for (var i = 0; i < temp.length; i++) {
@@ -686,23 +733,29 @@
                 }
 
 
-                console.log(dd)
 
                 pdfMake.createPdf(dd).download();
             })
             var Urun_Adı_Listesi = [];
             var Urun_Adet_Listesi = [];
             $.ajax({
-                url: 'Tsm-Sipariş-Raporu.aspx/Çalışılan_Urun_Getir',
+                url: 'Sipariş_Rapor_Kmy.aspx/Çalışılan_Urun_Getir',
                 type: 'POST',
-                data: "{'parametre': '" + TextBox2.val() + "*" + TextBox3.val() + "*" + Kullanıcı + "'}",
+                data: "{'parametre': '" + TextBox2.val() + "*" + TextBox3.val() + "*" + Kullanıcı_Adı_Düzelt() + "'," +
+                    "'İletim_Durum':'{İletim_Durum__:" + JSON.stringify(_Durum_Getir()) + "}'," +
+                    "'Ürün_Listesi':'{Ürün_Listesi__:" + JSON.stringify(_ürün_listesi_getir()) + "}'," +
+                    //"'Branş':'{Depo_Liste:" + JSON.stringify(Depo_Adı_Liste) + "}'" +
+                    "'Bölge_Listesi':'{Bölge_Listesi__:" + JSON.stringify(_Bölge_Listesi_Getir()) + "}'," +
+                    "'Kullanıcı_Listesi':'{Kullanıcı_Listesi__:" + JSON.stringify(_Kullanıcı_Listesi_Getir()) + "}'" +
+                    "}",
+
+
                 async: false,
                 dataType: "json",
                 contentType: "application/json; charset=utf-8",
                 success: function (data) {
                     var temp = JSON.parse(data.d)
 
-                    console.log(temp)
                     for (var i = 0; i < temp.length; i++) {
                         Urun_Adı_Listesi.push(temp[i].Urun_Adı)
                     }
@@ -714,7 +767,7 @@
                 },
                 error: function () {
 
-                    alert('Talep esnasında sorun oluştu.Yeniden deneyin');
+                   // alert('Talep esnasında sorun oluştu.Yeniden deneyin');
 
                 }
             });
@@ -767,7 +820,6 @@
                 success: function (data) {
                     var temp = JSON.parse(data.d)
 
-                    console.log(temp)
                     for (var i = 0; i < temp.length; i++) {
                         Urun_Adı_Listesi_Satılan.push(temp[i].Urun_Adı)
                     }
@@ -777,13 +829,12 @@
                     for (var i = 0; i < temp.length; i++) {
                         Urun_Mf_Adet_Listesi_Satılan.push(temp[i].Mf_Adet)
                     }
-                    console.log(Urun_Adı_Listesi_Satılan)
 
 
                 },
                 error: function () {
 
-                    alert('Talep esnasında sorun oluştu.Yeniden deneyin');
+                   // alert('Talep esnasında sorun oluştu.Yeniden deneyin');
 
                 }
             });
@@ -837,19 +888,19 @@
 
 
             $.ajax({
-                url: 'Tsm-Sipariş-Raporu.aspx/Farklı_Eczanelerin_Sayısı',
+                url: 'Sipariş_Rapor_Kmy.aspx/Farklı_Eczanelerin_Sayısı',
                 type: 'POST',
                 data: "{'parametre': '" + TextBox2.val() + "*" + TextBox3.val() + "*" + Kullanıcı_Adı_Düzelt() + "'," +
                     "'İletim_Durum':'{İletim_Durum__:" + JSON.stringify(_Durum_Getir()) + "}'," +
-                    "'Ürün_Listesi':'{Ürün_Listesi__:" + JSON.stringify(_ürün_listesi_getir()) + "}'" +
-                    //"'Branş':'{Depo_Liste:" + JSON.stringify(Depo_Adı_Liste) + "}'" +
+                    "'Ürün_Listesi':'{Ürün_Listesi__:" + JSON.stringify(_ürün_listesi_getir()) + "}'," +
+                    "'Bölge_Listesi':'{Bölge_Listesi__:" + JSON.stringify(_Bölge_Listesi_Getir()) + "}'," +
+                    "'Kullanıcı_Listesi':'{Kullanıcı_Listesi__:" + JSON.stringify(_Kullanıcı_Listesi_Getir()) + "}'" +
                     "}",
                 async: false,
                 dataType: "json",
                 contentType: "application/json; charset=utf-8",
                 success: function (data) {
                     var temp = JSON.parse(data.d)
-                    console.log("assadsda")
 
                     $('#Farklı_Eczane_Sayısı').val(temp[0].Eczane_Sayısı)
 
@@ -895,9 +946,7 @@
                 if (Liste_.length > 0) {
                     var Tbody = $('tbody[id=Farklı_Eczane_Listesi_Tbody]')
 
-                    console.log(Liste_)
                     for (var i = 0; i < Liste_.length; i++) {
-                        console.log(Tbody.html())
                         Tbody.append(
                             '<tr>' +
                             '<td>' + Liste_[i].Eczane_Adı + '</td>' +
@@ -934,24 +983,24 @@
             $('#Farlı_Eczaneleri_Gör').click(function () {
                 $('#Farklı_Eczane_modal').modal('show')
                 $.ajax({
-                    url: 'Tsm-Sipariş-Raporu.aspx/Farklı_Eczanelerin_Sayısı_Ad_Getir',
+                    url: 'Sipariş_Rapor_Kmy.aspx/Farklı_Eczanelerin_Sayısı_Ad_Getir',
                     type: 'POST',
                     data: "{'parametre': '" + TextBox2.val() + "*" + TextBox3.val() + "*" + Kullanıcı_Adı_Düzelt() + "'," +
                         "'İletim_Durum':'{İletim_Durum__:" + JSON.stringify(_Durum_Getir()) + "}'," +
-                        "'Ürün_Listesi':'{Ürün_Listesi__:" + JSON.stringify(_ürün_listesi_getir()) + "}'" +
-                        //"'Branş':'{Depo_Liste:" + JSON.stringify(Depo_Adı_Liste) + "}'" +
+                        "'Ürün_Listesi':'{Ürün_Listesi__:" + JSON.stringify(_ürün_listesi_getir()) + "}'," +
+                        "'Bölge_Listesi':'{Bölge_Listesi__:" + JSON.stringify(_Bölge_Listesi_Getir()) + "}'," +
+                        "'Kullanıcı_Listesi':'{Kullanıcı_Listesi__:" + JSON.stringify(_Kullanıcı_Listesi_Getir()) + "}'" +
                         "}",
                     async: false,
                     dataType: "json",
                     contentType: "application/json; charset=utf-8",
                     success: function (data) {
                         var temp = JSON.parse(data.d)
-                        console.log(temp)
                         Tabloyu_Doldur_Red(temp)
                     },
                     error: function () {
 
-                        alert('Talep esnasında sorun oluştu.Yeniden deneyin');
+                        //alert('Talep esnasında sorun oluştu.Yeniden deneyin');
 
                     }
                 });
@@ -991,7 +1040,7 @@
     <div class="box">
         <div class="box-body">
             <div class="row">
-                <div class="col-xs-12">
+                <div class="col-xs-12" hidden>
                     <div class="form-group">
 
                         <label>TSM Adı</label>

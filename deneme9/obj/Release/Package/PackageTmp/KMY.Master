@@ -4012,7 +4012,7 @@
 
                         <li id="Sipariş_İşlemleri_Header" runat="server" class="header">Sipariş İşlemleri</li>
                        
-                        <li id="Sipariş_Raportlarma" runat="server" class="treeview"><a href="Sipariş_Rapor.aspx">Sipariş Rapor</a></li>
+                        <li id="Sipariş_Raportlarma" runat="server" class="treeview"><a href="Sipariş_Rapor_KMY.aspx">Sipariş Rapor</a></li>
                         
                         <%-- <li class="treeview"><a href="/hizmetler.aspx">Hizmetler</a></li>
                         <li class="treeview"><a href="/projeler.aspx">Projeler</a></li>
