@@ -1104,6 +1104,126 @@ namespace deneme9
 
 
         }
+        public class Satılan_Urunler_Adet_Mf_Adet_Tablo
+        {
+            public string Mf_Adet { get; set; }
+            public string Adet { get; set; }
+            public string Urun_Adı { get; set; }
+
+
+        }
+        [System.Web.Services.WebMethod]
+        public static string Satılan_Urunler_Adet_Mf_Adet(string parametre, string İletim_Durum, string Ürün_Listesi, string Bölge_Listesi, string Kullanıcı_Listesi)
+
+
+        {
+
+            DataSet İletim_Durum_dataset = JsonConvert.DeserializeObject<DataSet>(İletim_Durum);
+            DataTable İletim_Durum_datatable = İletim_Durum_dataset.Tables["İletim_Durum__"];
+
+            DataSet Ürün_Listesi_dataset = JsonConvert.DeserializeObject<DataSet>(Ürün_Listesi);
+            DataTable Ürün_Listesi_datatable = Ürün_Listesi_dataset.Tables["Ürün_Listesi__"];
+
+
+            DataSet Kullanıcı_Listesi_dataset = JsonConvert.DeserializeObject<DataSet>(Kullanıcı_Listesi);
+            DataTable Kullanıcı_Listesi_datatable = Kullanıcı_Listesi_dataset.Tables["Kullanıcı_Listesi__"];
+
+            DataSet Bölge_Listesi_dataset = JsonConvert.DeserializeObject<DataSet>(Bölge_Listesi);
+            DataTable Bölge_Listesi_datatable = Bölge_Listesi_dataset.Tables["Bölge_Listesi__"];
+
+
+            string gelen_yıl = parametre.Split('*')[0];
+            string gelen_ay = parametre.Split('*')[1];
+            string Kullanıcı = parametre.Split('*')[2];
+
+            var queryWithForJson = "" +
+                "" +
+                                                  "  declare @Tüm_Kullanıcılar table(Id int)  " +
+                "" +
+                " insert into @Tüm_Kullanıcılar select * from @Kullanıcı_Table    " +
+                "  insert into @Tüm_Kullanıcılar select KullanıcıID from Kullanıcı where Kullanıcı_Bogle in(select * from @Bölge_Table)  " +
+                "" +
+                "" +
+                       "  select sum(Mf_Adet),sum(Adet),Urun_Adı from Siparis_Detay    " +
+        "                    " +
+        "                    " +
+        "                  inner join Sipariş_Genel    " +
+        "                   on Siparis_Detay.Siparis_Genel_Id=Sipariş_Genel.Siparis_Genel_Id    " +
+        "                 inner join Urunler     " +
+        "                 on Urunler.Urun_Id=Siparis_Detay.Urun_Id    " +
+        "" +
+        " inner join @İletim_table " +
+        " on (select(case when (Şehir_ is  null) then İletim_Durum else Şehir_  end))=İletim_Durum " +
+           " inner join @Urun_table " +
+                    " on (select(case when (Semt is  null) then Siparis_Detay.Urun_Id else Semt  end))=Siparis_Detay.Urun_Id " +
+        "                    " +
+        "                        where Sipariş_Genel.Olusturan_Kullanıcı in (select * from @Tüm_Kullanıcılar) and Tar between @baslagıc_Tar and @bitis_tar     " +
+        "					 " +
+        "                 group by Urun_Adı    " +
+        "";
+
+
+
+
+
+
+            var conn = new SqlConnection(@"server=.;Database=KASA;User ID=sa;Password=likompresto%1");
+            var cmd = new SqlCommand(queryWithForJson, conn);
+            conn.Open();
+            cmd.Parameters.AddWithValue("@Kullanıcı_Adı", Kullanıcı);//@baslagıc_Tar//@bitis_tar
+            cmd.Parameters.AddWithValue("@baslagıc_Tar", gelen_yıl);
+            cmd.Parameters.AddWithValue("@bitis_tar", gelen_ay);
+
+
+
+            SqlParameter tvpParam1 = cmd.Parameters.AddWithValue("@İletim_table", İletim_Durum_datatable);
+            tvpParam1.SqlDbType = SqlDbType.Structured;
+            tvpParam1.TypeName = "dbo.Geçmiş_Sorgu_Şehir";
+
+
+            SqlParameter tvpParam2 = cmd.Parameters.AddWithValue("@Urun_table", Ürün_Listesi_datatable);
+            tvpParam2.SqlDbType = SqlDbType.Structured;
+            tvpParam2.TypeName = "dbo.Geçmiş_Sorgu_Semt";
+
+
+            SqlParameter tvpParam3 = cmd.Parameters.AddWithValue("@Bölge_Table", Bölge_Listesi_datatable);
+            tvpParam3.SqlDbType = SqlDbType.Structured;
+            tvpParam3.TypeName = "dbo.Geçmiş_Sorgu_Semt";
+
+
+
+            SqlParameter tvpParam4 = cmd.Parameters.AddWithValue("@Kullanıcı_Table", Kullanıcı_Listesi_datatable);
+            tvpParam4.SqlDbType = SqlDbType.Structured;
+            tvpParam4.TypeName = "dbo.Geçmiş_Sorgu_Semt";
+
+
+            List<Satılan_Urunler_Adet_Mf_Adet_Tablo> tablo_Doldur_Classes = new List<Satılan_Urunler_Adet_Mf_Adet_Tablo>();
+
+
+            var jsonResult = new StringBuilder();
+            var reader = cmd.ExecuteReader();
+            if (!reader.HasRows)
+            {
+                jsonResult.Append("[]");
+            }
+            else
+            {
+                while (reader.Read())
+                {
+                    var Tablo_Doldur_Class_ = new Satılan_Urunler_Adet_Mf_Adet_Tablo
+                    {
+                        Mf_Adet = reader.GetValue(0).ToString(),
+                        Adet = reader.GetValue(1).ToString(),
+                        Urun_Adı = reader.GetValue(2).ToString(),
+                    };
+                    tablo_Doldur_Classes.Add(Tablo_Doldur_Class_);
+                }
+            }
+            conn.Close();
+            return JsonConvert.SerializeObject(tablo_Doldur_Classes);
+
+
+        }
     }
 
 }
