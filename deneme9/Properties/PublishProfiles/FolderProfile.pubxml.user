@@ -51,19 +51,19 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>05/13/2022 10:13:12</publishTime>
     </File>
     <File Include="bin/App_global.asax.compiled">
-      <publishTime>05/15/2022 17:31:31</publishTime>
+      <publishTime>05/16/2022 13:20:22</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>05/15/2022 17:31:31</publishTime>
+      <publishTime>05/16/2022 13:20:22</publishTime>
     </File>
     <File Include="bin/CKEditor.NET.dll">
       <publishTime>05/13/2022 10:13:36</publishTime>
     </File>
     <File Include="bin/deneme9.dll">
-      <publishTime>05/15/2022 17:31:14</publishTime>
+      <publishTime>05/16/2022 13:20:02</publishTime>
     </File>
     <File Include="bin/deneme9.pdb">
-      <publishTime>05/15/2022 17:31:14</publishTime>
+      <publishTime>05/16/2022 13:20:02</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>05/13/2022 10:13:36</publishTime>
@@ -22548,7 +22548,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>05/13/2022 10:13:36</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>05/15/2022 17:31:28</publishTime>
+      <publishTime>05/16/2022 13:20:12</publishTime>
     </File>
     <File Include="Profil.aspx">
       <publishTime>05/13/2022 10:13:12</publishTime>
@@ -23658,7 +23658,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>05/13/2022 10:13:12</publishTime>
     </File>
     <File Include="Sipariş_Rapor_KMY.aspx">
-      <publishTime>05/15/2022 17:30:12</publishTime>
+      <publishTime>05/16/2022 13:04:19</publishTime>
     </File>
     <File Include="Soru-Olustur.aspx">
       <publishTime>05/13/2022 10:13:12</publishTime>

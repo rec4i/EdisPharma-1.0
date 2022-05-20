@@ -603,8 +603,6 @@
                     "'Ürün_Listesi':'{Ürün_Listesi__:" + JSON.stringify(_ürün_listesi_getir()) + "}'," +
                     "'Bölge_Listesi':'{Bölge_Listesi__:" + JSON.stringify(_Bölge_Listesi_Getir()) + "}'," +
                     "'Kullanıcı_Listesi':'{Kullanıcı_Listesi__:" + JSON.stringify(_Kullanıcı_Listesi_Getir()) + "}'" +
-
-
                     //"'Branş':'{Depo_Liste:" + JSON.stringify(Depo_Adı_Liste) + "}'" +
                     "}",
                 contentType: 'application/json; charset=utf-8',
@@ -767,7 +765,7 @@
                 },
                 error: function () {
 
-                   // alert('Talep esnasında sorun oluştu.Yeniden deneyin');
+                    // alert('Talep esnasında sorun oluştu.Yeniden deneyin');
 
                 }
             });
@@ -811,9 +809,15 @@
             var Urun_Adet_Listesi_Satılan = [];
             var Urun_Mf_Adet_Listesi_Satılan = [];
             $.ajax({
-                url: 'Tsm-Sipariş-Raporu.aspx/Satılan_Urunler_Adet_Mf_Adet',
+                url: 'Sipariş_Rapor_Kmy.aspx/Satılan_Urunler_Adet_Mf_Adet',
                 type: 'POST',
-                data: "{'parametre': '" + TextBox2.val() + "*" + TextBox3.val() + "*" + Kullanıcı + "'}",
+                data: "{'parametre': '" + TextBox2.val() + "*" + TextBox3.val() + "*" + Kullanıcı_Adı_Düzelt() + "'," +
+                    "'İletim_Durum':'{İletim_Durum__:" + JSON.stringify(_Durum_Getir()) + "}'," +
+                    "'Ürün_Listesi':'{Ürün_Listesi__:" + JSON.stringify(_ürün_listesi_getir()) + "}'," +
+                    //"'Branş':'{Depo_Liste:" + JSON.stringify(Depo_Adı_Liste) + "}'" +
+                    "'Bölge_Listesi':'{Bölge_Listesi__:" + JSON.stringify(_Bölge_Listesi_Getir()) + "}'," +
+                    "'Kullanıcı_Listesi':'{Kullanıcı_Listesi__:" + JSON.stringify(_Kullanıcı_Listesi_Getir()) + "}'" +
+                    "}",
                 async: false,
                 dataType: "json",
                 contentType: "application/json; charset=utf-8",
@@ -834,7 +838,7 @@
                 },
                 error: function () {
 
-                   // alert('Talep esnasında sorun oluştu.Yeniden deneyin');
+                    // alert('Talep esnasında sorun oluştu.Yeniden deneyin');
 
                 }
             });
