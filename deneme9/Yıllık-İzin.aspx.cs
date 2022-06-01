@@ -37,52 +37,57 @@ namespace deneme9
           
 
 
-            var queryWithForJson = "declare @kullanıcı_Id int =(select KullanıcıID from Kullanıcı where KullanıcıAD COLLATE Latin1_general_CS_AS =@1);" +
-            "declare @Yıllık_İzin int =14;" +
-      
-            "declare @Kullanıcı_İşe_Baslama_Tar date =(select İse_Baslama_Tar from Kullanıcı where KullanıcıID=@kullanıcı_Id)" +
-     
-            "declare @Son_Dönem_Bitiş date = cast(datepart(YEAR,getdate())as nvarchar(50))+'-'+" +
-       
-            "cast(datepart(MONTH,@Kullanıcı_İşe_Baslama_Tar)as nvarchar(50)) +'-'+" +
-        
-            "cast(datepart(DAY,@Kullanıcı_İşe_Baslama_Tar)as nvarchar(50)); " +
-            "set @Son_Dönem_Bitiş=DATEADD(year , 1,@Son_Dönem_Bitiş );" +
-      
-            "declare @Kullanıcı_Kaç_Yıl_Çalıştı int =datediff( DAY,@Kullanıcı_İşe_Baslama_Tar,getdate());" +
-      
-            "declare @Geçen_Yıldan_Devreden_İzin_Süresi int=0;" +
-            "declare @İçinde_Bulunulan_Yılda_Hak_Kazanılan_İzin_Süresi int=0;" +
-            "Declare @Toplam_İzin_Süresi int = 0;" +
-            "declare @Toplam_İzinden_İçinde_Bulunulan_Yılda_Kullanılan_İzin_Süresi int = 0;" +
-     
-            "if(@Kullanıcı_Kaç_Yıl_Çalıştı>=365)" +
-            "begin; " +
-            "if (@Kullanıcı_Kaç_Yıl_Çalıştı>=730) " +
-            "begin; " +
-            "" +
-  
-            "set @Geçen_Yıldan_Devreden_İzin_Süresi=@Yıllık_İzin-(select count(*) from Yıllık_İzin where Kullanıcı_Id=@kullanıcı_Id and " +
-  
-            "Olusturulma_Tar between DATEADD(YEAR , -2 , @Son_Dönem_Bitiş) and DATEADD(YEAR , -1 , @Son_Dönem_Bitiş) ); " +
-            "end; " +
-        
-            "set @İçinde_Bulunulan_Yılda_Hak_Kazanılan_İzin_Süresi=@Yıllık_İzin;" +
-            "set @Toplam_İzin_Süresi=@Geçen_Yıldan_Devreden_İzin_Süresi+@İçinde_Bulunulan_Yılda_Hak_Kazanılan_İzin_Süresi;" +
-            "" +
-            "set @Toplam_İzinden_İçinde_Bulunulan_Yılda_Kullanılan_İzin_Süresi =(select count(*) from Yıllık_İzin where Kullanıcı_Id=@kullanıcı_Id and " +
-            "" +
-            "Olusturulma_Tar between DATEADD(YEAR , -1 , @Son_Dönem_Bitiş) and @Son_Dönem_Bitiş );" +
-            "end;" +
-         
-            "select @Geçen_Yıldan_Devreden_İzin_Süresi,@İçinde_Bulunulan_Yılda_Hak_Kazanılan_İzin_Süresi,@Toplam_İzin_Süresi,@Toplam_İzinden_İçinde_Bulunulan_Yılda_Kullanılan_İzin_Süresi,(@Toplam_İzin_Süresi-@Toplam_İzinden_İçinde_Bulunulan_Yılda_Kullanılan_İzin_Süresi)" +
-            ",(select (AD +' '+ Soyad) from Kullanıcı where KullanıcıID=@kullanıcı_Id ) " +
-            ",(select (Grup_Tam_Ad+'('+Grup_Kısa_Ad+')') from Kullanıcı  " +
-            "inner join Gruplar " +
-            "   on Kullanıcı_Grup=Grup_Id " +
-            "where KullanıcıID=@kullanıcı_Id ) " +
-     
-            "";
+            var queryWithForJson = "" +
+"declare @kullanıcı_Id int =(select KullanıcıID from Kullanıcı where KullanıcıAD COLLATE Latin1_general_CS_AS =@1); " +
+"             declare @Yıllık_İzin int =14; " +
+"      " +
+"             declare @Kullanıcı_İşe_Baslama_Tar date =(select İse_Baslama_Tar from Kullanıcı where KullanıcıID=@kullanıcı_Id) " +
+"     " +
+"             declare @Son_Dönem_Bitiş date = cast(datepart(YEAR,getdate())as nvarchar(50))+'-'+ " +
+"       " +
+"             cast(datepart(MONTH,@Kullanıcı_İşe_Baslama_Tar)as nvarchar(50)) +'-'+ " +
+"        " +
+"             cast(datepart(DAY,@Kullanıcı_İşe_Baslama_Tar)as nvarchar(50));  " +
+"             set @Son_Dönem_Bitiş=DATEADD(year , 1,@Son_Dönem_Bitiş ); " +
+"      " +
+"             declare @Kullanıcı_Kaç_Yıl_Çalıştı int =datediff( DAY,@Kullanıcı_İşe_Baslama_Tar,getdate()); " +
+"      " +
+"             declare @Geçen_Yıldan_Devreden_İzin_Süresi int=0; " +
+"             declare @İçinde_Bulunulan_Yılda_Hak_Kazanılan_İzin_Süresi int=0; " +
+"             Declare @Toplam_İzin_Süresi int = 0; " +
+"             declare @Toplam_İzinden_İçinde_Bulunulan_Yılda_Kullanılan_İzin_Süresi int = 0; " +
+"     " +
+"             if(@Kullanıcı_Kaç_Yıl_Çalıştı>=365) " +
+"             begin;  " +
+"             if (@Kullanıcı_Kaç_Yıl_Çalıştı>=730)  " +
+"             begin;  " +
+"              " +
+"  " +
+"             set @Geçen_Yıldan_Devreden_İzin_Süresi=@Yıllık_İzin-(select SUM(Süre) from Yıllık_İzin where Kullanıcı_Id=@kullanıcı_Id and  " +
+"  " +
+"             Olusturulma_Tar between DATEADD(YEAR , -2 , @Son_Dönem_Bitiş) and DATEADD(YEAR , -1 , @Son_Dönem_Bitiş) );  " +
+"             end;  " +
+"        " +
+"             set @İçinde_Bulunulan_Yılda_Hak_Kazanılan_İzin_Süresi=@Yıllık_İzin; " +
+"             set @Toplam_İzin_Süresi=@Geçen_Yıldan_Devreden_İzin_Süresi+@İçinde_Bulunulan_Yılda_Hak_Kazanılan_İzin_Süresi; " +
+"              " +
+"             set @Toplam_İzinden_İçinde_Bulunulan_Yılda_Kullanılan_İzin_Süresi = isnull((select SUM(Süre) from Yıllık_İzin where Kullanıcı_Id=@kullanıcı_Id and  " +
+"              " +
+"             Olusturulma_Tar between DATEADD(YEAR , -1 , @Son_Dönem_Bitiş) and @Son_Dönem_Bitiş ),0); " +
+"             end; " +
+"         " +
+"             select " +
+"			 @Geçen_Yıldan_Devreden_İzin_Süresi as Geçen_Yıldan_Devreden_İzin_Süresi," +
+"			 @İçinde_Bulunulan_Yılda_Hak_Kazanılan_İzin_Süresi as İçinde_Bulunulan_Yılda_Hak_Kazanılan_İzin_Süresi," +
+"			 @Toplam_İzin_Süresi as Toplam_İzin_Süresi," +
+"			 @Toplam_İzinden_İçinde_Bulunulan_Yılda_Kullanılan_İzin_Süresi as Toplam_İzinden_İçinde_Bulunulan_Yılda_Kullanılan_İzin_Süresi," +
+"			 (@Toplam_İzin_Süresi-@Toplam_İzinden_İçinde_Bulunulan_Yılda_Kullanılan_İzin_Süresi) " +
+"             ,(select (AD +' '+ Soyad) from Kullanıcı where KullanıcıID=@kullanıcı_Id )  " +
+"             ,(select (Grup_Tam_Ad+'('+Grup_Kısa_Ad+')') from Kullanıcı   " +
+"             inner join Gruplar  " +
+"                on Kullanıcı_Grup=Grup_Id  " +
+"             where KullanıcıID=@kullanıcı_Id )  " +
+"";
 
 
 

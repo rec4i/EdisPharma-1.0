@@ -417,7 +417,7 @@ namespace deneme9
                 while (true)
                 {
                     if (tarih_Öncekiayın_son_gunu.AddDays(-sayaç).ToString("dddd") != "Pazartesi")
-                    {
+                    {   
                         sayaç++;
                     }
                     else
